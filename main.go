@@ -1,9 +1,13 @@
+/*
+Copyright © 2024 NAME HERE <EMAIL ADDRESS>
+*/
 package main
 
-import "Yadro_CLI/cmd"
+import (
+	"mycli/cmd"
+)
 
 func main() {
-
 	cmd.Execute()
 
 }

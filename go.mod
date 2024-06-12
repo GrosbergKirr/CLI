@@ -1,4 +1,4 @@
-module Yadro_CLI
+module mycli
 
 go 1.22.4
 

@@ -19,13 +19,6 @@ func NewClient(addr string) (*Client, error) {
 	if err != nil {
 		return nil, fmt.Errorf("failed to create grpc grpc_client: %w", err)
 	}
-	//defer func() (*Client, error) {
-	//	err = cconn.Close()
-	//	if err != nil {
-	//		return nil, fmt.Errorf("failed to close grpc grpc_client: %w", err)
-	//	}
-	//	return nil, nil
-	//}()
 
 	client := servV1.NewGatewayServiceClient(cconn)
 
@@ -36,6 +29,16 @@ func NewClient(addr string) (*Client, error) {
 func (c *Client) ChangeHostName(ctx context.Context, newname string, addr string, pass string) (string, error) {
 	resp, err := c.Api.ChangeHostName(ctx, &servV1.HostRequest{
 		NewHostName: newname, Addr: addr, Password: pass,
+	})
+	if err != nil {
+		return "error", err
+	}
+	return resp.Result, nil
+}
+
+func (c *Client) DNSChange(ctx context.Context, dnsname string, addr string, pass string) (string, error) {
+	resp, err := c.Api.DNSChange(ctx, &servV1.DNSRequest{
+		NewDNSName: dnsname, Addr: addr, Password: pass,
 	})
 	if err != nil {
 		return "error", err
