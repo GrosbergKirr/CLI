@@ -16,7 +16,7 @@ var dnsparam consts.Consts
 
 var DNSSet = &cobra.Command{
 	Use:   "dnsset",
-	Short: "Set dns mame. Use -n [DNS/DNS/DNS...] to set DNSList.\n Use -a [address] to set server address.\n Use -p [password] to set server user password.",
+	Short: "Set dns mame.\n Use -n [DNS/DNS/DNS...] to set DNSList.\n Use -a [address] to set server address.\n Use -p [password] to set server user password.",
 	Long:  "This command set DNSList you want. Use -n [DNS/DNS/DNS...] to set DNSList.\n Use -a [address] to set server address.\n Use -p [password] to set server user password.",
 	Run: func(cmd *cobra.Command, args []string) {
 		ctx := context.Background()

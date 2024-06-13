@@ -12,7 +12,7 @@ import (
 var param consts.Consts
 var NameChange = &cobra.Command{
 	Use:   "setname",
-	Short: "Set host mame. Use -n [newname] to set New host name.\n Use -a [address] to set server address.\n Use -p [password] to set server user password.",
+	Short: "Set host mame.\n Use -n [newname] to set New host name.\n Use -a [address] to set server address.\n Use -p [password] to set server user password.",
 	Long: "This command set name on service which you want to set host mame. Use -n [newname] to set New host name.\n " +
 		"Use -a [address] to set server address.\n Use -p [password] to set server user password.",
 	Run: func(cmd *cobra.Command, args []string) {
