@@ -3,13 +3,14 @@ package cmd
 import (
 	"context"
 	"fmt"
-	"github.com/spf13/cobra"
 	"mycli/internal/consts"
 	"mycli/internal/grpc_client"
 	"os"
+
+	"github.com/spf13/cobra"
 )
 
-var param consts.Consts
+var param consts.Parameters
 var NameChange = &cobra.Command{
 	Use:   "setname",
 	Short: "Set host mame.\n Use -n [newname] to set New host name.\n Use -a [address] to set server address.\n Use -p [password] to set server user password.",

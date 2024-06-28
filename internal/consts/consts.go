@@ -1,6 +1,6 @@
 package consts
 
-type Consts struct {
+type Parameters struct {
 	HostName string
 	DNSList  string
 	Address  string

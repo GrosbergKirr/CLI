@@ -6,13 +6,14 @@ package cmd
 import (
 	"context"
 	"fmt"
-	"github.com/spf13/cobra"
 	"mycli/internal/consts"
 	"mycli/internal/grpc_client"
 	"os"
+
+	"github.com/spf13/cobra"
 )
 
-var dnsparam consts.Consts
+var dnsparam consts.Parameters
 
 var DNSSet = &cobra.Command{
 	Use:   "dnsset",
